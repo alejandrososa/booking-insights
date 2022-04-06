@@ -1,0 +1,19 @@
+Kata\Booking\Application\StatsBookingRequest\CalculateProfitPerNight:
+  properties:
+    data:
+      - Count:
+          min: 1
+          minMessage: 'You must specify at least one booking request.'
+      - All:
+          - Collection:
+              fields:
+                request_id:
+                  - NotNull: ~
+                check_in:
+                  - NotNull: ~
+                nights:
+                  - NotNull: ~
+                selling_rate:
+                  - NotNull: ~
+                margin:
+                  - NotNull: ~

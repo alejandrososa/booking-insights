@@ -1,0 +1,23 @@
+default:
+    formatters:
+        pretty: true
+        progress: true
+    suites:
+        default:
+            paths:
+                - '%paths.base%/tests/Booking/features'
+            contexts:
+                - Kata\Tests\Shared\Infrastructure\Behat\Context\CommonContext
+                - Kata\Tests\Shared\Infrastructure\Behat\Context\JsonContext
+                - Kata\Tests\Shared\Infrastructure\Behat\Context\SymfonyHttpContext
+            filters:
+                tags: "~@todo"
+
+    extensions:
+        FriendsOfBehat\SymfonyExtension:
+            bootstrap: 'tests/bootstrap.php'
+            kernel:
+                class: 'Kata\Kernel'
+                debug: true
+                environment: test
+                path: 'src/Kernel.php'

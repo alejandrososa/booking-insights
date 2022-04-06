@@ -1,0 +1,7 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+
+    Kata\Tests\Shared\Infrastructure\Behat\:
+        resource: '../tests/Shared/Infrastructure/Behat/*'

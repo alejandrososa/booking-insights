@@ -1,0 +1,7 @@
+booking:
+    resource: ../src/Booking/Infrastructure/Ui/Rest/
+    type: annotation
+
+kernel:
+    resource: ../src/Kernel.php
+    type: annotation
